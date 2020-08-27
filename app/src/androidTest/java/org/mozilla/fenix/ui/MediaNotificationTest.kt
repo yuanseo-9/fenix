@@ -136,9 +136,260 @@ class MediaNotificationTest {
         }
     }
 
-    @Ignore("Flaky test, temp disabled: https://github.com/mozilla-mobile/fenix/issues/12645")
     @Test
     fun mediaSystemNotificationInPrivateModeTest() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest2() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest3() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest4() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest5() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest6() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest7() {
+        val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
+
+        homeScreen { }.togglePrivateBrowsingMode()
+
+        navigationToolbar {
+        }.enterURLAndEnterToBrowser(audioTestPage.url) {
+            mDevice.waitForIdle()
+            clickMediaPlayerPlayButton()
+            waitForPlaybackToStart()
+        }.openNotificationShade {
+            verifySystemNotificationExists("A site is playing media")
+            clickMediaSystemNotificationControlButton("Pause")
+            verifyMediaSystemNotificationButtonState("Play")
+        }
+
+        mDevice.pressBack()
+
+        browserScreen {
+            verifyMediaIsPaused()
+        }.openTabDrawer {
+            closeTab()
+        }
+
+        mDevice.openNotification()
+
+        notificationShade {
+            verifySystemNotificationGone("A site is playing media")
+        }
+
+        // close notification shade before and go back to regular mode before the next test
+        mDevice.pressBack()
+        homeScreen { }.togglePrivateBrowsingMode()
+    }
+
+    @Test
+    fun mediaSystemNotificationInPrivateModeTest8() {
         val audioTestPage = TestAssetHelper.getAudioPageAsset(mockWebServer)
 
         homeScreen { }.togglePrivateBrowsingMode()
